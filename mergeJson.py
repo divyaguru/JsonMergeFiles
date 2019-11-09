@@ -19,7 +19,6 @@ def isDictEmpty(structure):
                
 
 listOfFiles = filebrowser()
-print(listOfFiles)
 
 
 jsonFilePrefix = input("Enter JSON file name prefix: ")
