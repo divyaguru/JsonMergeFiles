@@ -19,10 +19,18 @@ def isDictEmpty(structure):
                
 
 listOfFiles = filebrowser()
+print(listOfFiles)
+
+
+jsonFilePrefix = input("Enter JSON file name prefix: ")
+jsonMergeFileName = input("Enter the file to merge into: ")
+
+jsonMergeFileName = jsonMergeFileName + ".json"
+
 mergedArray = {}
 
 for files in listOfFiles:
-    if regex.findall("data", files):
+    if regex.findall(jsonFilePrefix, files):
         with open(files) as f:
             data = json.load(f)
             dictionaryKeyName = list(data)
@@ -38,5 +46,5 @@ for files in listOfFiles:
 print(mergedArray)
 
 
-with open('merge1.json', 'w') as outfile:
+with open(jsonMergeFileName, 'w') as outfile:
     json.dump(mergedArray, outfile, indent=4)
