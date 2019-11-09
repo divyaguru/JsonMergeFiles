@@ -38,8 +38,7 @@ for files in listOfFiles:
                 mergedArray[dictionaryKeyName[0]] = []
             
             for p in data[dictionaryKeyName[0]]:
-                mergedArray[dictionaryKeyName[0]].append(p)
-                #print(mergedArray)
+                mergedArray[dictionaryKeyName[0]].append(p)               
 
         
 print(mergedArray)
